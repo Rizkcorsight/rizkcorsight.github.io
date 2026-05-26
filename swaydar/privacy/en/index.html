@@ -22,7 +22,7 @@
 <p>Swaydar collects nothing. There are no accounts, no email, no analytics, no ads, and no third-party SDKs. The app makes zero network calls during normal play — the only network surface is the system-level purchase handshake for the optional $1.99 Pro unlock, which Apple or Google handles directly. Everything Swaydar remembers about you — your streak, your best, your daily archive, your in-progress game — lives in local storage on your device and never leaves it. If you uninstall the app, all of it is gone.</p>
 <h2>What we collect from you</h2>
 <p>Nothing leaves your device. We do not collect, transmit, or store any personal data on any server we control. Swaydar has no backend.</p>
-<p>Locally, on your device, Swaydar keeps the following inside the standard iOS <code>UserDefaults</code> (or its Android equivalent) and the App Group container shared between the main app and the home-/lock-screen widget (group ID <code>group.com.swaydar.app</code>):</p>
+<p>Locally, on your device, Swaydar keeps the following inside the standard iOS <code>UserDefaults</code> (or its Android equivalent) and the App Group container shared between the main app and the home-/lock-screen widget (group ID <code>group.com.rizkcorsight.swaydar</code>):</p>
 <ul>
 <li>Your current streak and best streak.</li>
 <li>A per-day archive of which scenarios you played, whether you solved</li>
@@ -66,7 +66,7 @@
 </ul>
 <p>Both stores handle payment, receipt validation, restore, and refunds end-to-end. Swaydar receives a single Boolean signal from the system (&quot;this user owns the Pro unlock&quot;) and stores that entitlement locally. We never see your name, email, payment instrument, billing address, or transaction history. Apple&#x27;s and Google&#x27;s privacy policies cover the purchase itself; ours covers only what Swaydar does with the entitlement signal, which is to flip a local flag.</p>
 <h2>What the App Group container can see</h2>
-<p>The Swaydar home-screen and lock-screen widget runs in a separate process from the main app. To render an honest streak number, it reads a small mirror of state from the App Group container (<code>group.com.swaydar.app</code>): current day number, current streak, best streak, whether today has been played, whether today was solved.</p>
+<p>The Swaydar home-screen and lock-screen widget runs in a separate process from the main app. To render an honest streak number, it reads a small mirror of state from the App Group container (<code>group.com.rizkcorsight.swaydar</code>): current day number, current streak, best streak, whether today has been played, whether today was solved.</p>
 <p>No network call is involved. The widget reads what the app already wrote locally. The App Group container is sandboxed by the operating system to these two processes.</p>
 <h2>Children</h2>
 <p>Swaydar is rated 4+ in the App Store and Everyone on Google Play. The app does not knowingly collect personal information from anyone, including children. Because there are no accounts and no data collection, there is no COPPA-regulated personal information for Swaydar to handle. No targeted advertising is shown, because no advertising of any kind is shown.</p>
