@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Swaydar &mdash; Privacy Policy (Português (Brasil))</title>
+    <meta name="description" content="Swaydar privacy policy for Português (Brasil). Swaydar collects no personal data.">
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+<body>
+    <header class="site">
+        <a href="../">&larr; Privacy</a>
+        <a href="../../support/">Support</a>
+    </header>
+
+    <main>
+        <article>
+<h1>Swaydar — Privacy Policy (Português (Brasil))</h1>
+<p>Effective date: 2026-05-25</p>
+<h2>Convenience translation</h2>
+<p>O Swaydar não coleta dados pessoais. Não há contas, anúncios, analytics nem SDKs de terceiros. Seu progresso fica no dispositivo, e a compra Pro opcional é processada diretamente pela Apple ou pelo Google.</p>
+<p>This page is provided as a convenience translation for the `pt-BR` store locale. The canonical privacy policy is the English version below. If a translation is unclear or differs from the English text, the English policy controls.</p>
+<hr>
+<h1>Swaydar — Privacy Policy</h1>
+<p>Effective date: 2026-05-25</p>
+<h2>Plain-English summary</h2>
+<p>Swaydar collects nothing. There are no accounts, no email, no analytics, no ads, and no third-party SDKs. The app makes zero network calls during normal play — the only network surface is the system-level purchase handshake for the optional $1.99 Pro unlock, which Apple or Google handles directly. Everything Swaydar remembers about you — your streak, your best, your daily archive, your in-progress game — lives in local storage on your device and never leaves it. If you uninstall the app, all of it is gone.</p>
+<h2>What we collect from you</h2>
+<p>Nothing leaves your device. We do not collect, transmit, or store any personal data on any server we control. Swaydar has no backend.</p>
+<p>Locally, on your device, Swaydar keeps the following inside the standard iOS <code>UserDefaults</code> (or its Android equivalent) and the App Group container shared between the main app and the home-/lock-screen widget (group ID <code>group.com.swaydar.app</code>):</p>
+<ul>
+<li>Your current streak and best streak.</li>
+<li>A per-day archive of which scenarios you played, whether you solved</li>
+<p>them, and how many attempts you used.</p>
+<li>A snapshot of your in-progress game so you can return to a partially</li>
+<p>played daily without losing your guesses.</p>
+<li>A handful of rating-prompt bookkeeping timestamps (see below).</li>
+<li>A small mirror of &quot;today&#x27;s state&quot; — day number, streak, whether</li>
+<p>you&#x27;ve played today — inside the App Group container so the widget process can render real numbers instead of a placeholder.</p>
+</ul>
+<p>That&#x27;s the entire list. No identifiers, no device fingerprint, no location, no contacts, no usage logs.</p>
+<h2>What we don&#x27;t do</h2>
+<p>To be unambiguous about what&#x27;s *not* in Swaydar:</p>
+<ul>
+<li>No third-party SDKs of any kind.</li>
+<li>No advertising, no ad networks, no ad mediation.</li>
+<li>No IDFA, no GAID, no advertising identifier collection.</li>
+<li>No device fingerprinting.</li>
+<li>No crash reporters (Crashlytics, Sentry, Bugsnag, etc.).</li>
+<li>No analytics (Firebase Analytics, Mixpanel, Amplitude, etc.).</li>
+<li>No marketing pixels, no attribution SDKs, no install attribution.</li>
+<li>No social-login SDKs, no Facebook SDK, no Google Sign-In.</li>
+<li>No cross-app tracking. No App Tracking Transparency prompt because</li>
+<p>there is nothing to track.</p>
+</ul>
+<h2>Rating prompt</h2>
+<p>After you&#x27;ve played a few dailies and shared at least one result, Swaydar may ask whether you&#x27;d like to rate the app. To decide *when* to show that prompt without nagging, the app stores three local timestamps in <code>UserDefaults</code>:</p>
+<ul>
+<li>First-launch timestamp — so the prompt doesn&#x27;t surface on day one.</li>
+<li>&quot;Has shared at least once&quot; flag — so we only ask people who have</li>
+<p>signaled they want to tell other players.</p>
+<li>Last-prompt timestamp — so the cool-down between prompts is honored.</li>
+</ul>
+<p>None of these values leave your device. The rating prompt itself is the system prompt provided by Apple (`SKStoreReviewController`) or Google Play&#x27;s in-app review API. If you choose to leave a review, the review content goes to Apple or Google directly via their own UI — Swaydar never sees what you wrote or whether you submitted anything.</p>
+<h2>In-app purchases</h2>
+<p>Swaydar Pro is a one-time $1.99 unlock that adds full daily history and the per-scenario counterfactual lattice. No subscription, no recurring billing.</p>
+<p>Purchase is processed by:</p>
+<ul>
+<li>Apple StoreKit on iOS.</li>
+<li>Google Play Billing on Android.</li>
+</ul>
+<p>Both stores handle payment, receipt validation, restore, and refunds end-to-end. Swaydar receives a single Boolean signal from the system (&quot;this user owns the Pro unlock&quot;) and stores that entitlement locally. We never see your name, email, payment instrument, billing address, or transaction history. Apple&#x27;s and Google&#x27;s privacy policies cover the purchase itself; ours covers only what Swaydar does with the entitlement signal, which is to flip a local flag.</p>
+<h2>What the App Group container can see</h2>
+<p>The Swaydar home-screen and lock-screen widget runs in a separate process from the main app. To render an honest streak number, it reads a small mirror of state from the App Group container (<code>group.com.swaydar.app</code>): current day number, current streak, best streak, whether today has been played, whether today was solved.</p>
+<p>No network call is involved. The widget reads what the app already wrote locally. The App Group container is sandboxed by the operating system to these two processes.</p>
+<h2>Children</h2>
+<p>Swaydar is rated 4+ in the App Store and Everyone on Google Play. The app does not knowingly collect personal information from anyone, including children. Because there are no accounts and no data collection, there is no COPPA-regulated personal information for Swaydar to handle. No targeted advertising is shown, because no advertising of any kind is shown.</p>
+<h2>Network usage</h2>
+<p>In normal play, Swaydar makes zero network calls. No CDN fetches, no &quot;check for new puzzles,&quot; no telemetry beacons, no remote configuration. Scenarios are bundled into the app binary at build time.</p>
+<p>The single exception is the system-level purchase handshake when you tap Buy on the Pro unlock or tap Restore Purchases. That call is made by Apple&#x27;s StoreKit or Google Play Billing, not by Swaydar&#x27;s code, and it terminates inside Apple&#x27;s or Google&#x27;s infrastructure. Swaydar receives back only the success/failure result.</p>
+<h2>Your rights</h2>
+<p>Because Swaydar never uploads anything, there is nothing on a server to access, correct, port, or delete. Your data lives on your device under your control. To erase it, uninstall the app — iOS and Android will purge the app sandbox, the App Group container, and the locally stored entitlement record. If you reinstall later and want to recover your Pro unlock, use the Restore Purchases button; Apple/Google will reissue the entitlement signal at no charge.</p>
+<p>If you want to wipe just your progress without losing the Pro unlock, delete and reinstall, then tap Restore Purchases on first launch.</p>
+<h2>California (CCPA / CPRA)</h2>
+<p>California residents have the right to know what personal information a business collects, to delete it, to correct it, and to opt out of its sale or sharing. Swaydar does not collect, sell, or share personal information. There is nothing to disclose, delete, or correct, and there is no sale or sharing to opt out of. We do not use sensitive personal information.</p>
+<h2>Europe (GDPR)</h2>
+<p>If you are in the European Economic Area, the UK, or Switzerland, GDPR grants rights of access, rectification, erasure, restriction, portability, and objection over your personal data, plus the right to lodge a complaint with a supervisory authority. Because Swaydar does not process personal data — there is no data controller in any meaningful sense, since nothing is collected — these rights have nothing to attach to. We rely on no legal basis for processing because no processing occurs.</p>
+<h2>Brazil (LGPD)</h2>
+<p>If you are in Brazil, the LGPD grants rights similar to GDPR: access, correction, deletion, portability, and information about data sharing. Swaydar does not collect or process personal data, so there is nothing to disclose, correct, delete, or port.</p>
+<h2>Changes to this policy</h2>
+<p>This policy is versioned by effective date. If we ever change anything material — for example, adding a feature that does involve a network request — the change will be flagged on the next app launch and the effective date below will move forward. Cosmetic edits (typos, link fixes) won&#x27;t trigger a notice.</p>
+<h2>Contact</h2>
+<p>Questions about this policy can go to <a href="mailto:support@rizkcorsight.com">support@rizkcorsight.com</a>.</p>
+<p>Swaydar is published by Rizk Corsight as an independent developer project.</p>
+<p>Effective date: 2026-05-25.</p>
+        </article>
+    </main>
+
+    <footer class="site">
+        <p>&copy; 2026 Rizk Corsight &middot;
+        <a href="../../support/">Support</a> &middot;
+        <a href="mailto:support@rizkcorsight.com">support@rizkcorsight.com</a></p>
+    </footer>
+</body>
+</html>

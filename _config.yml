@@ -1,0 +1,29 @@
+# GitHub Pages config for the Rizk Corsight portfolio + Swaydar marketing site.
+#
+# This is a purely static, hand-written HTML site. We do not actually want
+# Jekyll to process anything here, so a sibling `.nojekyll` file is also
+# present to short-circuit Jekyll's build pipeline. This `_config.yml` is
+# kept only for the metadata that GitHub Pages reads regardless.
+#
+# baseurl notes:
+#   - If served from the apex domain or `<user>.github.io`, leave `baseurl`
+#     as the empty string below. All in-page links are relative, so they
+#     resolve correctly at any mount point.
+#   - If served from a project path like `<user>.github.io/portfolio/`,
+#     change `baseurl` to `/portfolio` (no trailing slash). The relative
+#     `<a href="./swaydar/">` style links already work from any depth.
+
+title: "Rizk Corsight"
+description: "Independent iOS and Android apps. No ads, no analytics, no tracking. Built one at a time, by hand."
+baseurl: ""
+url: ""
+
+# Jekyll-side hygiene: even though `.nojekyll` is the real switch, keep
+# Jekyll's own scaffolding out of the published tree in case the flag is
+# ever removed by a future change.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
