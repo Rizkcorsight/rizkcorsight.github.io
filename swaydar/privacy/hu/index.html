@@ -25,10 +25,10 @@
 <h1>Swaydar — Privacy Policy</h1>
 <p>Effective date: 2026-05-25</p>
 <h2>Plain-English summary</h2>
-<p>Swaydar collects nothing. There are no accounts, no email, no analytics, no ads, and no third-party SDKs. The app makes zero network calls during normal play — the only network surface is the system-level purchase handshake for the optional $1.99 Pro unlock, which Apple or Google handles directly. Everything Swaydar remembers about you — your streak, your best, your daily archive, your in-progress game — lives in local storage on your device and never leaves it. If you uninstall the app, all of it is gone.</p>
+<p>Swaydar collects nothing. There are no accounts, no email, no analytics, no ads, and no third-party SDKs. The app makes zero network calls during normal play — the only network surface is the system-level purchase handshake for the optional $1.99 Pro unlock, which your app store handles directly. Everything Swaydar remembers about you — your streak, your best, your daily archive, your in-progress game — lives in local storage on your device and never leaves it. If you uninstall the app, all of it is gone.</p>
 <h2>What we collect from you</h2>
 <p>Nothing leaves your device. We do not collect, transmit, or store any personal data on any server we control. Swaydar has no backend.</p>
-<p>Locally, on your device, Swaydar keeps the following inside the standard iOS <code>UserDefaults</code> (or its Android equivalent) and the App Group container shared between the main app and the home-/lock-screen widget (group ID <code>group.com.rizkcorsight.swaydar</code>):</p>
+<p>Locally, on your device, Swaydar keeps the following inside the standard standard on-device app storage used by the app and widget:</p>
 <ul>
 <li>Your current streak and best streak.</li>
 <li>A per-day archive of which scenarios you played, whether you solved</li>
@@ -62,25 +62,24 @@
 <p>signaled they want to tell other players.</p>
 <li>Last-prompt timestamp — so the cool-down between prompts is honored.</li>
 </ul>
-<p>None of these values leave your device. The rating prompt itself is the system prompt provided by Apple (`SKStoreReviewController`) or Google Play&#x27;s in-app review API. If you choose to leave a review, the review content goes to Apple or Google directly via their own UI — Swaydar never sees what you wrote or whether you submitted anything.</p>
+<p>None of these values leave your device. The rating prompt itself is the system prompt provided by your app store. If you choose to leave a review, the review content goes to your app store directly via its own UI — Swaydar never sees what you wrote or whether you submitted anything.</p>
 <h2>In-app purchases</h2>
 <p>Swaydar Pro is a one-time $1.99 unlock that adds full daily history and the per-scenario counterfactual lattice. No subscription, no recurring billing.</p>
 <p>Purchase is processed by:</p>
 <ul>
-<li>Apple StoreKit on iOS.</li>
-<li>Google Play Billing on Android.</li>
+<li>Your app store's purchase system for the platform where you installed Swaydar.</li>
 </ul>
-<p>Both stores handle payment, receipt validation, restore, and refunds end-to-end. Swaydar receives a single Boolean signal from the system (&quot;this user owns the Pro unlock&quot;) and stores that entitlement locally. We never see your name, email, payment instrument, billing address, or transaction history. Apple&#x27;s and Google&#x27;s privacy policies cover the purchase itself; ours covers only what Swaydar does with the entitlement signal, which is to flip a local flag.</p>
+<p>Both stores handle payment, receipt validation, restore, and refunds end-to-end. Swaydar receives a single Boolean signal from the system (&quot;this user owns the Pro unlock&quot;) and stores that entitlement locally. We never see your name, email, payment instrument, billing address, or transaction history. Your app store's privacy policy covers the purchase itself; ours covers only what Swaydar does with the entitlement signal, which is to flip a local flag.</p>
 <h2>What the App Group container can see</h2>
 <p>The Swaydar home-screen and lock-screen widget runs in a separate process from the main app. To render an honest streak number, it reads a small mirror of state from the App Group container (<code>group.com.rizkcorsight.swaydar</code>): current day number, current streak, best streak, whether today has been played, whether today was solved.</p>
 <p>No network call is involved. The widget reads what the app already wrote locally. The App Group container is sandboxed by the operating system to these two processes.</p>
 <h2>Children</h2>
-<p>Swaydar is rated 4+ in the App Store and Everyone on Google Play. The app does not knowingly collect personal information from anyone, including children. Because there are no accounts and no data collection, there is no COPPA-regulated personal information for Swaydar to handle. No targeted advertising is shown, because no advertising of any kind is shown.</p>
+<p>Swaydar is rated for general audiences in supported stores. The app does not knowingly collect personal information from anyone, including children. Because there are no accounts and no data collection, there is no COPPA-regulated personal information for Swaydar to handle. No targeted advertising is shown, because no advertising of any kind is shown.</p>
 <h2>Network usage</h2>
 <p>In normal play, Swaydar makes zero network calls. No CDN fetches, no &quot;check for new puzzles,&quot; no telemetry beacons, no remote configuration. Scenarios are bundled into the app binary at build time.</p>
-<p>The single exception is the system-level purchase handshake when you tap Buy on the Pro unlock or tap Restore Purchases. That call is made by Apple&#x27;s StoreKit or Google Play Billing, not by Swaydar&#x27;s code, and it terminates inside Apple&#x27;s or Google&#x27;s infrastructure. Swaydar receives back only the success/failure result.</p>
+<p>The single exception is the system-level purchase handshake when you tap Buy on the Pro unlock or tap Restore Purchases. That call is made by your app store's purchase system, not by Swaydar&#x27;s code, and it terminates inside your app store's infrastructure. Swaydar receives back only the success/failure result.</p>
 <h2>Your rights</h2>
-<p>Because Swaydar never uploads anything, there is nothing on a server to access, correct, port, or delete. Your data lives on your device under your control. To erase it, uninstall the app — iOS and Android will purge the app sandbox, the App Group container, and the locally stored entitlement record. If you reinstall later and want to recover your Pro unlock, use the Restore Purchases button; Apple/Google will reissue the entitlement signal at no charge.</p>
+<p>Because Swaydar never uploads anything, there is nothing on a server to access, correct, port, or delete. Your data lives on your device under your control. To erase it, uninstall the app — uninstalling will purge the app sandbox and the locally stored entitlement record. If you reinstall later and want to recover your Pro unlock, use the Restore Purchases button; your app store will reissue the entitlement signal at no charge.</p>
 <p>If you want to wipe just your progress without losing the Pro unlock, delete and reinstall, then tap Restore Purchases on first launch.</p>
 <h2>California (CCPA / CPRA)</h2>
 <p>California residents have the right to know what personal information a business collects, to delete it, to correct it, and to opt out of its sale or sharing. Swaydar does not collect, sell, or share personal information. There is nothing to disclose, delete, or correct, and there is no sale or sharing to opt out of. We do not use sensitive personal information.</p>
