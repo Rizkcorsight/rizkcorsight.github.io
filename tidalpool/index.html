@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidal Pool — Time the coast. Meet the residents.</title>
+<meta name="description" content="The most beautiful and trustworthy tidepool companion for iPhone and iPad. Tide windows, curated species, look-don't-touch ethics. Local-only. No login.">
+<meta property="og:title" content="Tidal Pool">
+<meta property="og:description" content="Time the coast. Meet the residents. The premium tidepool companion for iPhone and iPad.">
+<style>
+  :root {
+    --ocean: #1a9c6e;
+    --foam: #f6fbfa;
+    --sand: #f1e6dc;
+    --kelp: #2c734f;
+    --coral: #e26f53;
+    --abyss: #10364a;
+    --ink: #1a1a1a;
+    --ink-soft: #555;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    line-height: 1.55;
+    background: linear-gradient(180deg, var(--foam) 0%, var(--sand) 100%);
+    min-height: 100vh;
+  }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; }
+  h1 { font-size: clamp(40px, 7vw, 84px); line-height: 1.05; letter-spacing: -0.02em; }
+  h2 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 18px; }
+  h3 { font-size: 22px; margin-bottom: 8px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  nav { padding: 32px 0; display: flex; align-items: center; justify-content: space-between; }
+  nav .brand { font-family: Georgia, serif; font-size: 22px; font-weight: 600; }
+  nav a { color: var(--ink-soft); text-decoration: none; margin-left: 24px; font-size: 15px; }
+  nav a:hover { color: var(--ocean); }
+  .hero { padding: 60px 0 100px; text-align: center; }
+  .hero p.tagline { font-size: 22px; color: var(--ink-soft); margin: 24px auto 32px; max-width: 640px; }
+  .badge {
+    display: inline-block; background: white; border-radius: 28px;
+    padding: 14px 28px; font-size: 16px; font-weight: 600;
+    box-shadow: 0 6px 22px rgba(16,54,74,0.12);
+    text-decoration: none; color: var(--abyss);
+  }
+  .badge:hover { transform: translateY(-2px); }
+  .badge .price { color: var(--ocean); font-weight: 700; }
+  .features { padding: 80px 0; }
+  .feature-grid {
+    display: grid; gap: 36px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .feature {
+    background: white; border-radius: 22px; padding: 32px;
+    box-shadow: 0 4px 16px rgba(16,54,74,0.06);
+  }
+  .feature .icon { font-size: 36px; margin-bottom: 14px; display: block; }
+  .feature p { color: var(--ink-soft); font-size: 15px; }
+  .promise { background: var(--abyss); color: var(--foam); padding: 80px 0; margin-top: 40px; border-radius: 32px 32px 0 0; }
+  .promise h2 { color: var(--foam); }
+  .promise .pledge { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 32px; }
+  .promise .pledge div { padding: 20px; background: rgba(255,255,255,0.05); border-radius: 14px; }
+  .promise .pledge strong { display: block; font-size: 17px; margin-bottom: 6px; color: var(--foam); }
+  .promise .pledge p { color: rgba(246,251,250,0.7); font-size: 14px; }
+  footer { padding: 40px 0 60px; text-align: center; color: var(--ink-soft); font-size: 14px; }
+  footer a { color: var(--ink-soft); margin: 0 12px; }
+  .audience { padding: 80px 0; background: var(--foam); border-radius: 32px; margin: 40px 0; }
+  .audience-grid { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 32px; }
+  .audience-card { padding: 24px; border-left: 3px solid var(--ocean); }
+  .audience-card .who { font-weight: 700; font-size: 18px; margin-bottom: 6px; }
+  .audience-card p { font-size: 15px; color: var(--ink-soft); }
+  .quote {
+    font-style: italic; font-family: Georgia, serif; font-size: 22px;
+    color: var(--ink); text-align: center; padding: 40px 24px; max-width: 720px; margin: 0 auto;
+    border-top: 1px solid rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <nav>
+    <div class="brand">Tidal Pool</div>
+    <div>
+      <a href="#features">Features</a>
+      <a href="#audience">Who it's for</a>
+      <a href="#promise">Privacy</a>
+      <a href="policy/">Policy</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Time the coast.<br><span style="color: var(--ocean)">Meet the residents.</span></h1>
+    <p class="tagline">The most beautiful and trustworthy tidepool companion for iPhone and iPad. Tide windows, curated species, look-don't-touch ethics. Photos and notes stay on your device.</p>
+    <a class="badge" href="#" rel="external"><span class="price">$3.99</span> &nbsp;·&nbsp; on the App Store</a>
+    <p style="margin-top: 28px; font-size: 14px; color: var(--ink-soft);">
+      🇺🇸 🇨🇦 &nbsp;·&nbsp;
+      Live tide windows for the <strong>United States and Canada</strong>.<br>
+      Interface available in English and French (US + Canadian variants of each).
+    </p>
+  </section>
+
+  <section style="padding: 60px 0;">
+    <h2>Where Tidal Pool works at v1.0</h2>
+    <p style="margin: 18px 0 36px; color: var(--ink-soft); max-width: 640px;">Native, live tide-station coverage from each country's official hydrographic service. We only ship tides we can verify on real APIs.</p>
+    <div class="feature-grid">
+      <div class="feature">
+        <strong>🇺🇸 United States</strong>
+        <p style="margin-top: 8px;">28 stations across the Pacific Coast (Monterey, Olympic, Big Sur), Atlantic (Acadia, Cape Cod, Outer Banks, Sanibel), and Hawaiʻi. Live, multi-day predictions including a year-long Minus Tide Calendar.</p>
+        <p style="margin-top: 6px; color: var(--ink-soft); font-size: 13px;"><em>Source: NOAA Tides &amp; Currents — public domain.</em></p>
+      </div>
+      <div class="feature">
+        <strong>🇨🇦 Canada</strong>
+        <p style="margin-top: 8px;">5 stations: Bay of Fundy (Saint John, Halifax) and BC Pacific (Vancouver, Tofino, Prince Rupert). Live, multi-day predictions; Bay of Fundy minus tides reach world-record extremes.</p>
+        <p style="margin-top: 6px; color: var(--ink-soft); font-size: 13px;"><em>Source: Canadian Hydrographic Service IWLS API.</em></p>
+      </div>
+      <div class="feature">
+        <strong>🪸 73 curated species</strong>
+        <p style="margin-top: 8px;">Editorial prose covering the Pacific Coast (US + BC), the Atlantic Coast (US + Maritimes), and Hawaiʻi. Every dangerous species flagged with a first-aid quick reference.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>What's inside</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="icon">🌊</span>
+        <h3>Next safe low tide</h3>
+        <p>Pulls from NOAA. Tells you when to be there, when to leave, and whether you'll need a headlamp.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">📅</span>
+        <h3>Minus Tide Calendar</h3>
+        <p>The 12 best windows at your coast this year, surfaced as a year-at-a-glance heat map. Plan around them.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🪸</span>
+        <h3>73 curated species</h3>
+        <p>Pacific Coast, Atlantic Coast, Hawaiʻi, Canadian Maritimes. Editorial prose, not Wikipedia stubs. Every danger flagged.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🤚</span>
+        <h3>Look. Don't touch. Don't collect.</h3>
+        <p>Per-jurisdiction ethics. First-aid quick reference for the species that can hurt or kill you.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">📏</span>
+        <h3>Coin-scale measurement</h3>
+        <p>Drop a coin in your photo. Two taps later, the species is measured to the millimeter — without ever lifting it.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">📓</span>
+        <h3>Field journal</h3>
+        <p>Photo, GPS, tide height, species. Local-only. EXIF stripped on share. Your record, your private record.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">📲</span>
+        <h3>Lock Screen Live Activity</h3>
+        <p>Counts down the safe window from your Lock Screen and Dynamic Island. You'll know when to walk back.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🌗</span>
+        <h3>Editorial design, dark mode</h3>
+        <p>System serif typography, a hand-tuned palette of foam, sand, kelp and ocean teal. Built iPhone- and iPad-first.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🪶</span>
+        <h3>Widgets</h3>
+        <p>Home Screen and Lock Screen widgets show your next low tide and the week's best windows.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote">
+    "Most tidepool visits land at the wrong tide. The right window — a daylight low, ideally below sea level — opens for ninety minutes twice a day, and it's worth planning around."
+  </div>
+
+  <section id="audience" class="audience">
+    <div class="container" style="padding: 0;">
+      <h2>Built for</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <div class="who">The Naturalist</div>
+          <p>You own Fylling's paper guide, you know what a chiton's home scar looks like, and you want a digital companion that doesn't patronize.</p>
+        </div>
+        <div class="audience-card">
+          <div class="who">The Parent</div>
+          <p>Your kid found a sea star. They want to know everything. You want safety, beauty, and zero embarrassing clip-art.</p>
+        </div>
+        <div class="audience-card">
+          <div class="who">The Visitor</div>
+          <p>One window in Monterey, the Bay of Fundy, or Acadia. Make it count: the right tide, the right pool, the right respectful behavior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="promise" class="promise">
+    <div class="container">
+      <h2>Our pledge</h2>
+      <div class="pledge">
+        <div><strong>No login.</strong><p>You shouldn't need an account to look at a sea star.</p></div>
+        <div><strong>No tracking.</strong><p>No analytics, no SDKs, no telemetry. Ever.</p></div>
+        <div><strong>No cloud.</strong><p>Your photos, journal, and station preferences stay on your device.</p></div>
+        <div><strong>One-time purchase.</strong><p>$3.99. No subscriptions, no IAP, no ads. We don't have a growth team to feed.</p></div>
+        <div><strong>Open-data sourced.</strong><p>NOAA tide data is public domain. Smithsonian and iNaturalist contributors keep us free of stock-photo gloss.</p></div>
+        <div><strong>Apple Privacy Nutrition.</strong><p>"Data Not Collected." We mean it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="policy/">Privacy</a>
+      <a href="mailto:rizkcorsight@rizkcorsight.com">Contact</a>
+      <a href="#">App Store</a>
+      <p style="margin-top: 18px;">Tide data: NOAA Tides &amp; Currents (public domain). Species photography: Smithsonian Open Access (CC0) and contributors to iNaturalist.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
