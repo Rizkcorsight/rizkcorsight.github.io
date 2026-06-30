@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a3a"/><stop offset="1" stop-color="#030713"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8a5bff"/><stop offset="1" stop-color="#ff5bc0"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffcf5a"/><stop offset=".5" stop-color="#ff5bc0"/><stop offset="1" stop-color="#8a5bff"/></linearGradient>
+    <radialGradient id="d" cx=".5" cy=".5" r=".6"><stop stop-color="#ff5bc0" stop-opacity=".8"/><stop offset="1" stop-color="#ff5bc0" stop-opacity="0"/></radialGradient>
+    <radialGradient id="e" cx=".5" cy=".5" r=".55"><stop stop-color="#57e6ff" stop-opacity=".5"/><stop offset="1" stop-color="#57e6ff" stop-opacity="0"/></radialGradient>
+    <filter id="f" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="g" x="-35%" y="-35%" width="170%" height="170%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <rect width="900" height="600" fill="url(#a)"/>
+  <circle cx="640" cy="135" r="190" fill="url(#d)" filter="url(#f)" opacity=".8"/>
+  <circle cx="245" cy="210" r="165" fill="url(#e)" filter="url(#f)" opacity=".58"/>
+  <path d="M0 391c160-48 320-2 466-38 172-42 286-30 434 36v211H0z" fill="#040816" opacity=".55"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 228c132-118 264-140 397-72 63 32 118 38 190-13" stroke="url(#c)" stroke-width="44" opacity=".92"/>
+    <path d="M138 303c90-60 165-66 257-20 80 41 153 41 265-8" stroke="#8a5bff" stroke-width="28" opacity=".78"/>
+    <path d="M314 84c69 42 155 45 250 8" stroke="#ff5bc0" stroke-width="18" opacity=".88"/>
+  </g>
+  <g transform="translate(450 225)" filter="url(#g)">
+    <path d="M-92-54c50-74 177-53 204 31 25 78-42 157-133 146-88-10-124-102-71-177z" fill="#fff1d0"/>
+    <circle cx="-38" cy="-10" r="13" fill="#091735"/>
+    <circle cx="52" cy="-13" r="13" fill="#091735"/>
+    <path d="M-29 54c31 26 79 21 105-9" fill="none" stroke="#091735" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="-76" cy="28" r="18" fill="#ff74bb" opacity=".75"/>
+    <circle cx="102" cy="24" r="16" fill="#8a5bff" opacity=".55"/>
+    <path d="M-23-88c24-36 73-44 103-16" fill="none" stroke="#ff5bc0" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(226 130) rotate(-24)">
+    <rect x="-13" y="-18" width="26" height="192" rx="13" fill="#fff0c5"/>
+    <path d="M-25 150h50l-14 74h-22z" fill="url(#b)"/>
+    <circle cy="238" r="24" fill="#ff5bc0" filter="url(#g)"/>
+  </g>
+  <g transform="translate(706 222) rotate(34)">
+    <path d="M-14-94h28l8 178c-11 18-33 18-44 0z" fill="#d8f8ff"/>
+    <path d="M-42 92c28-24 56-24 84 0l-23 34h-38z" fill="url(#b)"/>
+  </g>
+  <g fill="#ffcf5a">
+    <circle cx="146" cy="118" r="9"/><circle cx="738" cy="95" r="8"/><circle cx="774" cy="302" r="7"/><circle cx="318" cy="336" r="6"/>
+  </g>
+  <g fill="#ff5bc0" opacity=".9">
+    <circle cx="93" cy="333" r="5"/><circle cx="170" cy="82" r="4"/><circle cx="626" cy="65" r="5"/><circle cx="808" cy="178" r="4"/>
+  </g>
+</svg>
