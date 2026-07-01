@@ -27,7 +27,7 @@ The website is available in 24 language routes with canonical and hreflang alter
 - Chemorgic — A calm guide to a cleaner home. A private, room-by-room companion offering practical, budget-aware swaps with honest evidence levels. Fully offline, no accounts, no tracking. [Google Play: https://play.google.com/store/apps/details?id=com.rizkcorsight.chemorgic]
 - Cari Art Design — Caricatures drawn just for you. Snap a selfie and watch a friendly character artist draw your caricature live, sketch to color, processed privately on device, with no uploads. [Coming soon]
 - Bearing — Know your sky, tides & seasons. Tides, sky, weather, birds & blooms for your region — one calm page, on-device. [App Store: https://apps.apple.com/us/app/bearing-field-almanac/id6777971421]
-- Tidal Pool — Plan the low tide. Meet life. Low-tide windows for 33 US & Canada coasts, plus 73 species cards. No tracking. [Coming soon]
+- Tidal Pool — Plan the low tide. Meet life. Low-tide windows for 33 US & Canada coasts, plus 73 species cards. No tracking. [App Store: https://apps.apple.com/us/app/tidal-pool-tidepool-timing/id6777971429]
 
 ## Stores
 - App Store: https://apps.apple.com/us/developer/rizk-corsight-llc/id1896065289
