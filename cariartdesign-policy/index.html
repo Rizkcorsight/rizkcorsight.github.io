@@ -31,6 +31,9 @@
     a {
       color: #0f766e;
     }
+    ul {
+      padding-left: 1.25rem;
+    }
     video {
       width: 100%;
       max-width: 720px;
@@ -56,6 +59,18 @@
     <p>The app does not ask for, gather, or store your name, email address, phone number, location, contacts, identifiers, or any profile about you. There is no login and no developer server. Your source photo and finished caricature are not uploaded for processing.</p>
     <p>The only network activity is downloading optional art model packs through the platform's own asset delivery service. These downloads carry no photo, face, or personal content from you.</p>
     <p>Purchases are handled by Apple App Store or Google Play. The app does not receive your billing details; the developer receives only aggregate store reporting.</p>
+
+    <h2 id="face-data">Face Data and Photos</h2>
+    <p>When you take or choose a photo, the app uses the image only to make your caricature on your device. The app may use on-device face detection to find a face rectangle and facial landmark points, such as the eyes, nose, mouth, and face outline. These points are used only to frame the photo, check that a usable face is present, and reshape the image into a caricature. They are not used to identify you, authenticate you, build a biometric template, or compare your face with any other person.</p>
+    <p>Your source photo, the detected face rectangle, and facial landmark points are handled in app memory during the caricature process. They are not uploaded, sold, shared, or sent to the developer or any third party. The app has no developer server, account system, analytics service, ad network, or tracking SDK that could receive this information.</p>
+    <p>The app does not retain the source photo or facial landmark points after the drawing flow is complete, unless you choose to keep or export the finished artwork. Finished caricature souvenirs and optional time-lapse videos that you keep are stored in the app's private storage on your device. If you save or share artwork to Photos or another destination, that exported copy is under your control.</p>
+
+    <h2 id="storage-retention">Storage, Retention, and Deletion</h2>
+    <p>Anything you keep, such as finished caricature souvenirs, optional time-lapse videos, and settings, lives in the app's private storage on your device. The app writes nothing about you to any remote location.</p>
+    <p>You can delete a souvenir in the app to remove that artwork from the app's private storage. You can delete the app to remove everything the app wrote on your device. If your device backup includes app data, saved souvenirs may also be included in your private device backup under your own Apple or Google account; the developer has no access to that backup.</p>
+
+    <h2 id="sharing">Sharing and Disclosure</h2>
+    <p>Cari Art Design does not share, sell, rent, or disclose photos, face data, finished artwork, or personal information to third parties. The app does not upload user photos or face data for cloud processing. The only network use is downloading optional art model packs from the app store's asset-delivery service, and those downloads do not contain user photos, face data, or personal content.</p>
 
     <h2>Foreground Service Demo</h2>
     <p>This video demonstrates the user-visible foreground service used for long model-pack downloads and long on-device generation sessions. The service shows a quiet ongoing notification while a user-requested transfer or generation continues.</p>
