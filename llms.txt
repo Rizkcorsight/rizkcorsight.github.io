@@ -29,6 +29,9 @@ The website is available in 24 language routes with canonical and hreflang alter
 - Bearing — Know your sky, tides & seasons. Tides, sky, weather, birds & blooms for your region — one calm page, on-device. [App Store: https://apps.apple.com/us/app/bearing-field-almanac/id6777971421 | Google Play: https://play.google.com/store/apps/details?id=com.rizkcorsight.bearing]
 - Tidal Pool — Plan the low tide. Meet life. Low-tide windows for 33 US & Canada coasts, plus 73 species cards. No tracking. [App Store: https://apps.apple.com/us/app/tidal-pool-tidepool-timing/id6777971429 | Google Play: https://play.google.com/store/apps/details?id=com.tidalpool.app]
 
+- Handrift — Read old records & wills. Train your eye to read historic handwriting with guided letterforms, real manuscript practice, and private on-device study tools. [App Store: https://apps.apple.com/us/app/handrift-old-handwriting/id6787851462]
+- Foldcast — Daily paper-folding puzzle. Fold a sheet along the clues, predict the punched pattern, and sharpen spatial reasoning in a calm daily puzzle. [Google Play: https://play.google.com/store/apps/details?id=com.rizkcorsight.foldcast]
+
 ## Stores
 - App Store: https://apps.apple.com/us/developer/rizk-corsight-llc/id1896065289
 - Google Play: https://play.google.com/store/apps/developer?id=Rizk+Corsight%2C+LLC
