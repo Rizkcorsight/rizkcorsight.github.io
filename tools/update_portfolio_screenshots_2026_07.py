@@ -4,17 +4,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGS = ["en", "es", "fr", "de", "it", "ja", "pt", "zh-hans", "zh-hant", "nl", "ko", "ar", "ru", "cs", "da", "fi", "he", "hi", "id", "nb", "pl", "sv", "tr", "vi"]
-VERSION = "20260715"
+VERSION = "2026071503"
 
 # These images were selected after comparing every portfolio card with the
 # current App Store screenshot set. Localized routes use localized artwork.
 UPGRADES = {
     "brinepost": "brinepost-1.webp",
+    "bearing": "bearing-1.webp",
     "cari": "cari-1.webp",
     "cue": "cue-1.webp",
     "handrift": "handrift-1.webp",
     "inquest": "inquest-1.webp",
     "manualnest": "manualnest-1.webp",
+    "markline": "markline-1.webp",
+    "partypilot": "partypilot-1.webp",
     "plumes": "plumes-1.webp",
     "plushbeantracker": "plushbeantracker-1.webp",
     "postcardarchive": "postcardarchive-1.webp",
