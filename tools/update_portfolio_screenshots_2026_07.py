@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGS = ["en", "es", "fr", "de", "it", "ja", "pt", "zh-hans", "zh-hant", "nl", "ko", "ar", "ru", "cs", "da", "fi", "he", "hi", "id", "nb", "pl", "sv", "tr", "vi"]
-VERSION = "2026071503"
+VERSION = "2026071504"
 
 # These images were selected after comparing every portfolio card with the
 # current App Store screenshot set. Localized routes use localized artwork.
@@ -22,6 +22,7 @@ UPGRADES = {
     "plushbeantracker": "plushbeantracker-1.webp",
     "postcardarchive": "postcardarchive-1.webp",
     "puzai": "puzai-1.webp",
+    "rinmath": "rinmath-1.webp",
     "swaydar": "swaydar-1.webp",
     "sweetshowdown": "sweetshowdown-1.webp",
     "tidalpool": "tidalpool-1.webp",
