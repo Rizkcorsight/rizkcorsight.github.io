@@ -5,6 +5,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LANGS = ["en", "es", "fr", "de", "it", "ja", "pt", "zh-hans", "zh-hant", "nl", "ko", "ar", "ru", "cs", "da", "fi", "he", "hi", "id", "nb", "pl", "sv", "tr", "vi"]
 VERSION = "2026071504"
+VERSIONS = {
+    "partypilot": "2026071506",
+}
 
 # These images were selected after comparing every portfolio card with the
 # current App Store screenshot set. Localized routes use localized artwork.
@@ -33,15 +36,16 @@ for lang in LANGS:
     text = path.read_text()
 
     for slug, filename in UPGRADES.items():
+        version = VERSIONS.get(slug, VERSION)
         if lang == "en":
-            replacement = f"/assets/screens/{filename}?v={VERSION}"
+            replacement = f"/assets/screens/{filename}?v={version}"
             text = re.sub(
                 rf"/assets/screens/{re.escape(filename)}(?:\?v=\d+)?",
                 replacement,
                 text,
             )
         else:
-            replacement = f"/assets/screens/i18n/{lang}/{slug}.webp?v={VERSION}"
+            replacement = f"/assets/screens/i18n/{lang}/{slug}.webp?v={version}"
             text = re.sub(
                 rf"/assets/screens/(?:{re.escape(filename)}|i18n/{re.escape(lang)}/{re.escape(slug)}\.webp)(?:\?v=\d+)?",
                 replacement,

@@ -96,6 +96,17 @@ INQUEST_TOKEN = {
     "de": "de-DE",
 }
 
+PARTYPILOT_TOKEN = {
+    **LOCALIZED_TOKEN,
+    "en": "en-US",
+    "es": "es-ES",
+    "fr": "fr-FR",
+    "de": "de-DE",
+    "nl": "nl-NL",
+    "ar": "ar-SA",
+    "nb": "no",
+}
+
 def first_png(directory: Path, prefix: str) -> Path:
     matches = sorted(directory.glob(f"{prefix}*.png"))
     if not matches:
@@ -160,7 +171,7 @@ def sources() -> dict[str, dict[str, Path]]:
     cari = APPLE / "CariArtDesign/artifacts/website-screenshots/iphone69"
     handrift = APPLE / "Handrift/build/website-screenshots/iphone69"
     swaydar = APPLE / "Swaydar/build/website-screenshots/iphone69"
-    partypilot = APPLE / "PartyPilot/build/website-screenshots/iphone69"
+    partypilot = APPLE / "PartyPilot/fastlane/screenshots"
     puzai = APPLE / "PuzAI/build/website-screenshots/iphone69"
     app_captures = Path("/tmp/website-app-captures")
     history_cache = Path("/tmp/rizkcorsight-history-screens")
@@ -175,7 +186,7 @@ def sources() -> dict[str, dict[str, Path]]:
         result["cari"][site] = cari / token / "01_onboarding.png"
         result["handrift"][site] = handrift / token / "letterforms.png"
         result["swaydar"][site] = swaydar / token / "onboarding.png"
-        result["partypilot"][site] = partypilot / token / "paywall.png"
+        result["partypilot"][site] = partypilot / PARTYPILOT_TOKEN[site] / "01-iphone-69.png"
         result["puzai"][site] = puzai / token / "onboarding.png"
         result["plumes"][site] = app_captures / "plumes" / f"{site}.png"
         result["markline"][site] = app_captures / "markline" / f"{site}.png"
@@ -197,9 +208,6 @@ def sources() -> dict[str, dict[str, Path]]:
     # of presenting English UI as if it were localized.
     for site in {"he", "ru", "tr"}:
         result["cari"][site] = make_card("cari", site)
-
-    for site in {"nl", "ru", "cs", "da", "fi", "he", "hi", "id", "nb", "pl", "sv", "tr", "vi"}:
-        result["partypilot"][site] = make_card("partypilot", site)
 
     # The archived PuzAI capture set has cross-locale mixups (for example,
     # Vietnamese copy under Hebrew and Norwegian copy under Russian). Replace
