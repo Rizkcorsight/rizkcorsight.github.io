@@ -49,12 +49,13 @@ for lang in LANGS:
     text = path.read_text()
     text = text.replace("https://rizkcorsight.github.io", "https://www.rizkcorsight.com")
     hand, fold = COPY[lang]
+    handrift_image = "handrift-1.webp?v=20260715" if lang == "en" else f"i18n/{lang}/handrift.webp?v=20260715"
 
     scripts = list(re.finditer(r'<script type="application/ld\+json">(.*?)</script>', text, re.S))
     item_match = next(m for m in scripts if '"@type":"ItemList"' in m.group(1))
     data = json.loads(item_match.group(1))
     data["itemListElement"] = [x for x in data["itemListElement"] if x["item"].get("@id", "").split("#")[-1] not in {"handrift", "foldcast"}]
-    data["itemListElement"].append(app_item(21, "Handrift: Old Handwriting", hand[1], "iOS, iPadOS, macOS", "EducationalApplication", APPLE, [APPLE], "handrift", "handrift-1.webp", "handrift.webp", lang))
+    data["itemListElement"].append(app_item(21, "Handrift: Old Handwriting", hand[1], "iOS, iPadOS, macOS", "EducationalApplication", APPLE, [APPLE], "handrift", handrift_image, "handrift.webp", lang))
     data["itemListElement"].append(app_item(22, "Foldcast", fold[1], "iOS, iPadOS, Android", "GameApplication", FOLDCAST_APPLE, [FOLDCAST_APPLE, GOOGLE], "foldcast", "foldcast-1.webp", "foldcast.webp", lang))
     data["numberOfItems"] = 22
     replacement = '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + '</script>'
@@ -69,7 +70,7 @@ for lang in LANGS:
     play_badge = badge(play_badge_match.group(0), GOOGLE)
     open_label = {"es":"Abrir", "fr":"Ouvrir", "de":"Öffne", "it":"Apri", "ja":"ストアで開く", "pt":"Abrir", "zh-hans":"在商店中打开", "zh-hant":"在商店中開啟", "nl":"Open", "ko":"스토어에서 열기", "ar":"فتح", "ru":"Открыть", "cs":"Otevřít", "da":"Åbn", "fi":"Avaa", "he":"פתיחה", "hi":"खोलें", "id":"Buka", "nb":"Åpne", "pl":"Otwórz", "sv":"Öppna", "tr":"Aç", "vi":"Mở"}.get(lang, "Open")
     hand_card = f'''      <article class="card reveal" id="handrift" style="--g1:#b14dff;--g2:#ff5bc0">
-        <div class="shotwrap"><a class="shot" href="{APPLE}" target="_blank" rel="noopener" aria-label="{html.escape(open_label)} Handrift"><img loading="lazy" src="/assets/screens/handrift-1.webp" width="300" height="450" alt="Handrift"></a></div>
+        <div class="shotwrap"><a class="shot" href="{APPLE}" target="_blank" rel="noopener" aria-label="{html.escape(open_label)} Handrift"><img loading="lazy" src="/assets/screens/{handrift_image}" width="300" height="650" alt="Handrift"></a></div>
         <div class="meta"><img class="icon" loading="lazy" src="/assets/icons/handrift.webp" width="54" height="54" alt=""><div><h3>Handrift: Old Handwriting</h3><p class="sub">{html.escape(hand[0])}</p></div></div>
         <p class="desc">{html.escape(hand[1])}</p><div class="badges">{app_badge}</div>
       </article>
