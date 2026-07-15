@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LANGS = ["en", "es", "fr", "de", "it", "ja", "pt", "zh-hans", "zh-hant", "nl", "ko", "ar", "ru", "cs", "da", "fi", "he", "hi", "id", "nb", "pl", "sv", "tr", "vi"]
 VERSION = "2026071504"
 VERSIONS = {
-    "partypilot": "2026071506",
+    "partypilot": None,
 }
 
 # These images were selected after comparing every portfolio card with the
@@ -20,7 +20,7 @@ UPGRADES = {
     "inquest": "inquest-1.webp",
     "manualnest": "manualnest-1.webp",
     "markline": "markline-1.webp",
-    "partypilot": "partypilot-1.webp",
+    "partypilot": "partypilot-2026071506.webp",
     "plumes": "plumes-1.webp",
     "plushbeantracker": "plushbeantracker-1.webp",
     "postcardarchive": "postcardarchive-1.webp",
@@ -37,17 +37,21 @@ for lang in LANGS:
 
     for slug, filename in UPGRADES.items():
         version = VERSIONS.get(slug, VERSION)
+        suffix = f"?v={version}" if version else ""
         if lang == "en":
-            replacement = f"/assets/screens/{filename}?v={version}"
+            replacement = f"/assets/screens/{filename}{suffix}"
+            legacy_filename = "partypilot-1.webp" if slug == "partypilot" else filename
             text = re.sub(
-                rf"/assets/screens/{re.escape(filename)}(?:\?v=\d+)?",
+                rf"/assets/screens/(?:{re.escape(filename)}|{re.escape(legacy_filename)})(?:\?v=\d+)?",
                 replacement,
                 text,
             )
         else:
-            replacement = f"/assets/screens/i18n/{lang}/{slug}.webp?v={version}"
+            localized_filename = filename if slug == "partypilot" else f"{slug}.webp"
+            legacy_localized_filename = f"{slug}.webp"
+            replacement = f"/assets/screens/i18n/{lang}/{localized_filename}{suffix}"
             text = re.sub(
-                rf"/assets/screens/(?:{re.escape(filename)}|i18n/{re.escape(lang)}/{re.escape(slug)}\.webp)(?:\?v=\d+)?",
+                rf"/assets/screens/(?:{re.escape(filename)}|i18n/{re.escape(lang)}/(?:{re.escape(localized_filename)}|{re.escape(legacy_localized_filename)}))(?:\?v=\d+)?",
                 replacement,
                 text,
             )

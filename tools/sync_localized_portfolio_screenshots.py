@@ -244,6 +244,15 @@ def destination(app: str, site: str) -> Path:
     return ROOT / "assets/screens/i18n" / site / f"{app}.webp"
 
 
+def versioned_destination(app: str, site: str) -> Path | None:
+    if app != "partypilot":
+        return None
+    filename = "partypilot-2026071506.webp"
+    if site == "en":
+        return ROOT / "assets/screens" / filename
+    return ROOT / "assets/screens/i18n" / site / filename
+
+
 def export_webp(source: Path, target: Path) -> None:
     if not source.is_file():
         raise FileNotFoundError(source)
@@ -269,6 +278,9 @@ def main() -> None:
                 print(f"{app:19} {site:8} <- preserved existing website artwork")
                 continue
             export_webp(localized[site], destination(app, site))
+            versioned = versioned_destination(app, site)
+            if versioned is not None:
+                export_webp(localized[site], versioned)
             print(f"{app:19} {site:8} <- {localized[site]}")
 
 
