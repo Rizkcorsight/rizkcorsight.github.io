@@ -35,6 +35,7 @@ COPY = {
 }
 
 APPLE = "https://apps.apple.com/us/app/handrift-old-handwriting/id6787851462"
+FOLDCAST_APPLE = "https://apps.apple.com/us/app/foldcast-paper-folding-game/id6787431868"
 GOOGLE = "https://play.google.com/store/apps/details?id=com.rizkcorsight.foldcast"
 
 def app_item(position, name, desc, os_name, category, url, same_as, slug, image, icon, language):
@@ -54,7 +55,7 @@ for lang in LANGS:
     data = json.loads(item_match.group(1))
     data["itemListElement"] = [x for x in data["itemListElement"] if x["item"].get("@id", "").split("#")[-1] not in {"handrift", "foldcast"}]
     data["itemListElement"].append(app_item(21, "Handrift: Old Handwriting", hand[1], "iOS, iPadOS, macOS", "EducationalApplication", APPLE, [APPLE], "handrift", "handrift-1.webp", "handrift.webp", lang))
-    data["itemListElement"].append(app_item(22, "Foldcast", fold[1], "Android", "GameApplication", GOOGLE, [GOOGLE], "foldcast", "foldcast-1.webp", "foldcast.webp", lang))
+    data["itemListElement"].append(app_item(22, "Foldcast", fold[1], "iOS, iPadOS, Android", "GameApplication", FOLDCAST_APPLE, [FOLDCAST_APPLE, GOOGLE], "foldcast", "foldcast-1.webp", "foldcast.webp", lang))
     data["numberOfItems"] = 22
     replacement = '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + '</script>'
     text = text[:item_match.start()] + replacement + text[item_match.end():]
@@ -64,6 +65,7 @@ for lang in LANGS:
     if not app_badge_match or not play_badge_match:
         raise RuntimeError(f"Badges not found in {path}")
     app_badge = badge(app_badge_match.group(0), APPLE)
+    foldcast_app_badge = badge(app_badge_match.group(0), FOLDCAST_APPLE)
     play_badge = badge(play_badge_match.group(0), GOOGLE)
     open_label = {"es":"Abrir", "fr":"Ouvrir", "de":"Öffne", "it":"Apri", "ja":"ストアで開く", "pt":"Abrir", "zh-hans":"在商店中打开", "zh-hant":"在商店中開啟", "nl":"Open", "ko":"스토어에서 열기", "ar":"فتح", "ru":"Открыть", "cs":"Otevřít", "da":"Åbn", "fi":"Avaa", "he":"פתיחה", "hi":"खोलें", "id":"Buka", "nb":"Åpne", "pl":"Otwórz", "sv":"Öppna", "tr":"Aç", "vi":"Mở"}.get(lang, "Open")
     hand_card = f'''      <article class="card reveal" id="handrift" style="--g1:#b14dff;--g2:#ff5bc0">
@@ -73,19 +75,25 @@ for lang in LANGS:
       </article>
 '''
     fold_card = f'''      <article class="card reveal" id="foldcast" style="--g1:#b14dff;--g2:#ff5bc0">
-        <div class="shotwrap"><a class="shot" href="{GOOGLE}" target="_blank" rel="noopener" aria-label="{html.escape(open_label)} Foldcast"><img loading="lazy" src="/assets/screens/foldcast-1.webp" width="300" height="495" alt="Foldcast"></a></div>
+        <div class="shotwrap"><a class="shot" href="{FOLDCAST_APPLE}" target="_blank" rel="noopener" aria-label="{html.escape(open_label)} Foldcast"><img loading="lazy" src="/assets/screens/foldcast-1.webp" width="300" height="495" alt="Foldcast"></a></div>
         <div class="meta"><img class="icon" loading="lazy" src="/assets/icons/foldcast.webp" width="54" height="54" alt=""><div><h3>Foldcast</h3><p class="sub">{html.escape(fold[0])}</p></div></div>
-        <p class="desc">{html.escape(fold[1])}</p><div class="badges">{play_badge}</div>
+        <p class="desc">{html.escape(fold[1])}</p><div class="badges">{foldcast_app_badge}{play_badge}</div>
       </article>
 '''
-    text = re.sub(r'\s*<article class="card reveal" id="handrift".*?</article>\s*', '\n', text, flags=re.S)
-    text = re.sub(r'\s*<article class="card reveal" id="foldcast".*?</article>\s*', '\n', text, flags=re.S)
+    text = re.sub(r'\s*<article class="card reveal" id="handrift".*?</article>\s*', '\n      ', text, flags=re.S)
+    text = re.sub(r'\s*<article class="card reveal" id="foldcast".*?</article>\s*', '\n      ', text, flags=re.S)
     marker = '      <article class="card reveal" id="cue"'
     if marker not in text:
         raise RuntimeError(f"Cue marker not found in {path}")
     text = text.replace(marker, hand_card + fold_card + marker, 1)
+    text = re.sub(r'<img loading="lazy" src="/assets/icons/(?:handrift|foldcast)\.webp" width="58" height="58" alt="">', '', text)
     text = text.replace('</div>\n      <p class="statline">', '<img loading="lazy" src="/assets/icons/handrift.webp" width="58" height="58" alt=""><img loading="lazy" src="/assets/icons/foldcast.webp" width="58" height="58" alt=""></div>\n      <p class="statline">', 1)
-    text = re.sub(r'<p class="statline"><b>20 apps</b>.*?</p>', lambda m: m.group(0).replace('<b>20 apps</b>', '<b>22 apps</b>').replace('<b>20</b>', '<b>21</b>'), text, count=1)
+
+    def update_counts(match):
+        counts = iter((22, 22, 21))
+        return re.sub(r'<b>(.*?)</b>', lambda b: '<b>' + re.sub(r'\d+', str(next(counts)), b.group(1), count=1) + '</b>', match.group(0))
+
+    text = re.sub(r'<p class="statline">.*?</p>', update_counts, text, count=1)
     path.write_text(text)
 
 for rel in ["robots.txt", "sitemap.xml", "llms.txt", "_config.yml"]:
@@ -95,6 +103,6 @@ for rel in ["robots.txt", "sitemap.xml", "llms.txt", "_config.yml"]:
 
 llms = ROOT / "llms.txt"
 text = llms.read_text()
-if "Handrift —" not in text:
-    text = text.replace("## Stores", "- Handrift — Read old records & wills. Train your eye to read historic handwriting with guided letterforms, real manuscript practice, and private on-device study tools. [App Store: " + APPLE + "]\n- Foldcast — Daily paper-folding puzzle. Fold a sheet along the clues, predict the punched pattern, and sharpen spatial reasoning in a calm daily puzzle. [Google Play: " + GOOGLE + "]\n\n## Stores")
+foldcast_line = "- Foldcast — Daily paper-folding puzzle. Fold a sheet along the clues, predict the punched pattern, and sharpen spatial reasoning in a calm daily puzzle. [App Store: " + FOLDCAST_APPLE + "] [Google Play: " + GOOGLE + "]"
+text = re.sub(r'^- Foldcast —.*$', foldcast_line, text, flags=re.M)
 llms.write_text(text)

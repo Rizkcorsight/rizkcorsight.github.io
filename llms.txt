@@ -30,7 +30,7 @@ The website is available in 24 language routes with canonical and hreflang alter
 - Tidal Pool — Plan the low tide. Meet life. Low-tide windows for 33 US & Canada coasts, plus 73 species cards. No tracking. [App Store: https://apps.apple.com/us/app/tidal-pool-tidepool-timing/id6777971429 | Google Play: https://play.google.com/store/apps/details?id=com.tidalpool.app]
 
 - Handrift — Read old records & wills. Train your eye to read historic handwriting with guided letterforms, real manuscript practice, and private on-device study tools. [App Store: https://apps.apple.com/us/app/handrift-old-handwriting/id6787851462]
-- Foldcast — Daily paper-folding puzzle. Fold a sheet along the clues, predict the punched pattern, and sharpen spatial reasoning in a calm daily puzzle. [Google Play: https://play.google.com/store/apps/details?id=com.rizkcorsight.foldcast]
+- Foldcast — Daily paper-folding puzzle. Fold a sheet along the clues, predict the punched pattern, and sharpen spatial reasoning in a calm daily puzzle. [App Store: https://apps.apple.com/us/app/foldcast-paper-folding-game/id6787431868] [Google Play: https://play.google.com/store/apps/details?id=com.rizkcorsight.foldcast]
 
 - Fish Discover — Coming soon on Apple and Android. Private, offline fish identification from a photo, with clear field marks that help people learn why a species matches. [Preview: https://www.rizkcorsight.com/#fishdiscover]
 
