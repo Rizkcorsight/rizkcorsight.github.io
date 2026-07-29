@@ -1,0 +1,178 @@
+{
+  "generatedAt": "2026-07-29",
+  "appCount": 24,
+  "storeSources": [
+    "/Users/rzopenclaw/Projects/Apps/Reports/apple-store-full-audit-2026-07-26/APP_STORE_CONNECT_FULL_AUDIT_2026-07-26.json",
+    "/Users/rzopenclaw/Projects/Apps/Reports/google-play-full-audit-2026-07-26/GOOGLE_PLAY_LISTING_AUDIT_2026-07-26.json"
+  ],
+  "apps": [
+    {
+      "app": "Bearing",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/bearing-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "d75afa4c67948787"
+    },
+    {
+      "app": "Brinepost",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/brinepost-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "4a9d364ec92501ca"
+    },
+    {
+      "app": "Cari Art Design",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/cariartdesign-policy",
+      "locales": 32,
+      "translatedPagesWritten": 0,
+      "sourceHash": "5a48fa3c2386cbdd"
+    },
+    {
+      "app": "Chemorgic",
+      "repo": "/Users/rzopenclaw/Projects/Policy/rizkcorsight.github.io",
+      "locales": 37,
+      "translatedPagesWritten": 35,
+      "sourceHash": "7e7538ad6fc9e135"
+    },
+    {
+      "app": "Cue",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/cue-policy",
+      "locales": 39,
+      "translatedPagesWritten": 0,
+      "sourceHash": "a81eeb236715a156"
+    },
+    {
+      "app": "Periodic Table: Elements",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/elements-policy",
+      "locales": 54,
+      "translatedPagesWritten": 0,
+      "sourceHash": "870ae65e5ea97989"
+    },
+    {
+      "app": "Fish Discover",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/fishdiscover-policy",
+      "locales": 45,
+      "translatedPagesWritten": 0,
+      "sourceHash": "ad7db59555e6b511"
+    },
+    {
+      "app": "Foldcast",
+      "repo": "/Users/rzopenclaw/Projects/Policy/rizkcorsight.github.io",
+      "locales": 39,
+      "translatedPagesWritten": 29,
+      "sourceHash": "ec94ac9ad2b20ba0"
+    },
+    {
+      "app": "Handrift",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/handrift-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "c6a87d4e483b5148"
+    },
+    {
+      "app": "Inquest",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/inquest-app-pages",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "9cb0d347c7e6565e"
+    },
+    {
+      "app": "Insect Discover",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/insectdiscover-policy",
+      "locales": 45,
+      "translatedPagesWritten": 0,
+      "sourceHash": "aae2871d3a57eac2"
+    },
+    {
+      "app": "ManualNest",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/manualnest-policy",
+      "locales": 33,
+      "translatedPagesWritten": 0,
+      "sourceHash": "6586d67b7e3017a6"
+    },
+    {
+      "app": "Markline",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/markline-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "f68ef392f4055b3f"
+    },
+    {
+      "app": "Nine Steeps",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/ninesteeps-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "21567ee1e6b6a65e"
+    },
+    {
+      "app": "PartyPilot",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/partypilot",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "d6378ea0ede2be5b"
+    },
+    {
+      "app": "Plumes",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/plumes-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "17d62fca5d409deb"
+    },
+    {
+      "app": "Plush Bean Tracker",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/plushbeantracker-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "33d64b287f20c726"
+    },
+    {
+      "app": "Postcard Archive",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/postcard-archive-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "8267cc6158f31d71"
+    },
+    {
+      "app": "PuzAI",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/puzai-policy",
+      "locales": 36,
+      "translatedPagesWritten": 0,
+      "sourceHash": "48044c15e58de7fb"
+    },
+    {
+      "app": "Rinmath",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/rinmath-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "b322b0298243717c"
+    },
+    {
+      "app": "Swaydar",
+      "repo": "/Users/rzopenclaw/Projects/Policy/rizkcorsight.github.io",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "fd2cbbaaeaad67de"
+    },
+    {
+      "app": "Sweet Showdown",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/sweetshowdown-policy",
+      "locales": 12,
+      "translatedPagesWritten": 0,
+      "sourceHash": "6ae63377a899a7b8"
+    },
+    {
+      "app": "Tidal Pool",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/tidalpool-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "100dd1f3b97ab801"
+    },
+    {
+      "app": "Washi Stash",
+      "repo": "/Users/rzopenclaw/Projects/Apps/SupportSites/washistash-policy",
+      "locales": 40,
+      "translatedPagesWritten": 0,
+      "sourceHash": "ddd9b57ee0d6291d"
+    }
+  ]
+}
