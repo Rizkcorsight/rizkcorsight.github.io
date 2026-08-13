@@ -720,4 +720,19 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.rizkcorsight.com/tr/" />
     <xhtml:link rel="alternate" hreflang="vi" href="https://www.rizkcorsight.com/vi/" />
   </url>
+  <url>
+    <loc>https://rizkcorsight.github.io/deductionisles/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://rizkcorsight.github.io/deductionisles/privacy/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://rizkcorsight.github.io/deductionisles/support/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
