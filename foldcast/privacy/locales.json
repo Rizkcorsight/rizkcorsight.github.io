@@ -1,6 +1,6 @@
 {
   "app": "Foldcast",
-  "updated": "2026-07-29",
+  "updated": "2026-09-06",
   "englishPolicy": "index.html",
   "storeLocaleSources": [
     "App Store Connect",
@@ -88,5 +88,7 @@
     "zh-Hans": "existing-translation",
     "zh-Hant": "existing-translation"
   },
-  "sourceHash": "ec94ac9ad2b20ba0"
+  "sourceHash": "ec94ac9ad2b20ba0",
+  "content": "Full privacy policy in every configured store locale",
+  "source": "Reviewed app behavior; store inventories dated 2026-09-06"
 }

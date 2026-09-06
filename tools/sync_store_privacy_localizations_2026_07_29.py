@@ -538,8 +538,6 @@ def existing_full_translation(target: Target, route: str) -> Path | None:
         if not candidate.exists():
             continue
         text = candidate.read_text(encoding="utf-8")
-        if target.repo == CENTRAL:
-            return candidate
         if "localized-store-access-page-2026-07-15" in text:
             continue
         stripped = strip_managed_blocks(text)
